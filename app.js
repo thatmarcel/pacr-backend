@@ -11,7 +11,6 @@ let db;
 
 connectToMongoDB().then(_db => {
     db = _db;
-    startRepeatingTasks(db);
 }).catch(err => console.error(err));
 
 app.get("/doc/fetch", async (req, res) => {
